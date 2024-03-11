@@ -1,1 +1,1 @@
-# semaforo-front
+# proyecto-semaforo

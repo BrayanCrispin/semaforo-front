@@ -1,0 +1,143 @@
+/*generales*/
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fondo {
+  background-color: #ededed;
+  height: 100vh;
+}
+
+.barra-superior,
+.barra-inferior {
+  background-color: #38383a;
+  align-items: center;
+}
+
+.texto-barra {
+  color: #fff;
+  text-align: center;
+  font-family: bauer;
+}
+
+.superior-derecha {
+  background-color: #11304c;
+  border-bottom-left-radius: 30px;
+  border-style: solid;
+  border-color: #a1a1a1;
+}
+
+.contenedor-central {
+  background: linear-gradient(
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1
+  );
+  color: #fff;
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-height: 80%;
+}
+
+.contenedor-texto {
+  background-color: #11304c;
+  color: #fff;
+  height: 100%;
+  padding: 20px;
+}
+
+.inferior-izquierda {
+  background-color: #11304c;
+  border-top-right-radius: 30px;
+  border-style: solid;
+  border-color: #a1a1a1;
+  color: #ffffff;
+}
+
+.cuerpo {
+  margin-top: 100px;
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 84%;
+}
+
+.caja {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: small;
+}
+
+/*login*/
+.imglgsoft {
+  padding: 5px;
+  max-width: 65px;
+}
+
+.img-login {
+  max-width: 100%;
+}
+
+.central-login {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 60%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caja-img {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  margin: 0;
+}
+
+/*otros*/
+.caja p {
+  margin: 0;
+  color: #11304c;
+}
+
+.fila-centro {
+  height: 85%;
+}
+
+.caja-45 {
+  height: 48%;
+}
+
+.caja-100 {
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .contenedor-central.col-lg-9 {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fila-centro > .col-md-8, .fila-centro > .col-md-7{
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .btn i {
+    font-size: 0.8rem;
+  }
+}

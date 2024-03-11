@@ -1,0 +1,58 @@
+/* Estilos generales */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.fondo {
+  background: linear-gradient(
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1,
+    #ffffff,
+    #a1a1a1
+  );
+}
+
+.barra-superior, .barra-inferior {
+  background-color: #38383a;
+  color: #fff;
+}
+
+.texto-barra {
+  text-align: center;
+}
+
+.superior-derecha {
+  background-color: #11304c;
+}
+
+.inferior-izquierda {
+  background-color: #11304c;
+}
+
+.cuerpo {
+  margin-top: 50px;
+}
+
+.central-login {
+  padding: 20px;
+}
+
+.img-lgsoft {
+  max-width: 100%;
+}
+
+
+@media (max-width: 767.98px) {
+  .cuerpo {
+    margin-top: 0;
+  }
+  .central-login {
+    padding: 10px;
+  }
+}

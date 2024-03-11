@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" style="margin: 0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión</title>
+
+    <!-- javascript -->
+    <script src="./javascript/navegacion.js"></script>
+
+    <!-- iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+
+    <!-- fuente Bauer -->
+    <link href="https://fonts.cdnfonts.com/css/bauer" rel="stylesheet" />
+
+    <!-- fuente Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <div class="fondo h-100 w-100 position-fixed">
+      <div class="col m-0 p-0 h-100">
+        <!-- Encabezado -->
+        <div class="row fixed-top">
+          <div class="row barra-superior m-0 p-0">
+            <div class="texto-barra col-md-10">
+              <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
+            </div>
+            <div class="superior-derecha col-md-2">
+              <img
+                class="imglgsoft"
+                src="./imagenes/smfr.jpeg"
+                alt="logo-software"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Cuerpo -->
+        <div class="row cuerpo">
+          <div class="contenedor-central col-6 central-login overflow-auto">
+            <div class="row h-100 m-0 align-content-between">
+              <div class="col-md contenedor-texto">
+                <h5 class="card-title text-center">Inicio de sesión</h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="usuario" class="form-label text-light"
+                      >Usuario</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="usuario"
+                      name="usuario"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="contraseña" class="form-label text-light"
+                      >Contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="contraseña"
+                      name="contraseña"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <button id="btnLogin" class="btn btn-primary me-2">
+                      Iniciar sesión
+                    </button>
+                    <a href="#" class="btn btn-secondary">Registrar</a>
+                  </div>
+                </form>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-link text-primary"
+                    >¿Olvidaste tu contraseña?</a
+                  >
+                </div>
+              </div>
+              <div class="col-md h-100 p-0">
+                <div class="caja caja-img">
+                  <img
+                    src="./imagenes/cosa.png"
+                    alt="Imagen"
+                    class="img-login"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pie -->
+        <div class="row fixed-bottom m-0">
+          <div class="row barra-inferior m-0 p-0">
+            <div class="inferior-izquierda col-md-2">
+              <img
+                class="imglgsoft"
+                src="./imagenes/smfr.jpeg"
+                alt="logo-software"
+              />
+            </div>
+            <div class="texto-barra col-md-10">
+              <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

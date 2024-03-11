@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>actas</title>
+
+    <!-- javascript -->
+    <script src="./javascript/navegacion.js"></script>
+
+    <!-- iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+
+    <!-- fuente Bauer -->
+    <link href="https://fonts.cdnfonts.com/css/bauer" rel="stylesheet" />
+
+    <!-- fuente Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <div class="fondo h-100 w-100 position-fixed">
+      <div class="col m-0 p-0 h-100">
+        <!-- Encabezado -->
+        <div class="row fixed-top">
+          <div class="row barra-superior m-0 p-0">
+            <div class="texto-barra col-lg-9">
+              <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
+            </div>
+            <div class="superior-derecha col-lg-3">
+              <div class="row p-2">
+                <div class="col-4 text-center">
+                  <button
+                    type="button"
+                    id="btnActa"
+                    disabled="true"
+                    class="btn btn-success rounded-5"
+                  >
+                    <i class="far fa-file"></i>
+                  </button>
+                </div>
+                <div class="col-4 text-center">
+                  <button
+                    type="button"
+                    id="btnProyecto"
+                    class="btn btn-warning text-light rounded-5"
+                  >
+                    <i class="fas fa-tools"></i>
+                  </button>
+                </div>
+                <div class="col-4 text-center">
+                  <button
+                    type="button"
+                    id="btnCompromiso"
+                    class="btn btn-danger rounded-circle"
+                  >
+                    <i class="fas fa-tasks"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- cuerpo -->
+        <div class="row cuerpo overflow-y-auto">
+          <div class="contenedor-central col-lg-3 vh-100">
+            <div class="contenedor-texto">
+              <div class="overflow-y-scroll h-100">
+                <div class="caja">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <select class="form-select mx-2">
+                        <option selected>Buscar por...</option>
+                        <option value="codigo">Código</option>
+                        <option value="fecha">Fecha</option>
+                        <option value="proyecto">Proyecto</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control mx-2"
+                        id="buscar"
+                        placeholder="Buscar..."
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div id="lista-actas">
+                  <div class="caja">
+                    <p>Código: XYZ789</p>
+                    <p>Fecha: 2024-03-05</p>
+                    <p class="text-black">Proyecto: Proyecto E</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: VWX123</p>
+                    <p>Fecha: 2024-03-04</p>
+                    <p class="text-black">Proyecto: Proyecto H</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: PQR456</p>
+                    <p>Fecha: 2024-03-03</p>
+                    <p class="text-black">Proyecto: Proyecto F</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: GHI789</p>
+                    <p>Fecha: 2024-03-02</p>
+                    <p class="text-black">Proyecto: Proyecto D</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: YZA456</p>
+                    <p>Fecha: 2024-03-01</p>
+                    <p class="text-black">Proyecto: Proyecto I</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: MNO123</p>
+                    <p>Fecha: 2024-02-29</p>
+                    <p class="text-black">Proyecto: Proyecto E</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: STU789</p>
+                    <p>Fecha: 2024-02-28</p>
+                    <p class="text-black">Proyecto: Proyecto G</p>
+                  </div>
+                  <div class="caja">
+                    <p>Código: DEF456</p>
+                    <p>Fecha: 2024-02-27</p>
+                    <p class="text-black">Proyecto: Proyecto C</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contenedor-central col-lg-9">
+            <div class="contenedor-texto h-100 fila-centro">
+              <div class="row pb-2 align-content-between">
+                <div class="col">
+                  <h5>ACTA</h5>
+                </div>
+                <div class="col-2 text-end">
+                  <button
+                    id="nueva-acta"
+                    class="btn btn-success rounded-circle"
+                  >
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <div class="col-2 text-end">
+                  <button class="btn btn-warning text-light rounded-circle">
+                    <i class="fas fa-print"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="row fila-centro overflow-y-auto">
+                <div class="col-md-8 h-100">
+                  <div class="caja caja-100">
+                    <h5 class="text-dark">COMPROMISOS</h5>
+                    <div class="h-75 overflow-y-scroll">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Descripción</th>
+                            <th>Responsable</th>
+                            <th>Fecha de Plazo</th>
+                            <th>Hecho</th>
+                            <th>Validado</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="table-danger">
+                            <td>Revisión de presupuesto</td>
+                            <td>María García</td>
+                            <td>2024-03-10</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-danger">
+                            <td>Entrega de informe final</td>
+                            <td>Luis Martínez</td>
+                            <td>2024-03-15</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Organización del evento</td>
+                            <td>Ana López</td>
+                            <td>2024-04-05</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Presentación del proyecto</td>
+                            <td>Pablo Ramírez</td>
+                            <td>2024-04-10</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-success">
+                            <td>Seguimiento de reunión</td>
+                            <td>Andrea Gómez</td>
+                            <td>2024-05-05</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-success">
+                            <td>Actualización del sitio web</td>
+                            <td>Ricardo Sánchez</td>
+                            <td>2024-05-10</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 h-100">
+                  <div class="caja caja-45">
+                    <h5 class="text-dark">NOTAS</h5>
+                    <div class="h-75 overflow-y-scroll">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Debitis esse fuga possimus laboriosam voluptates aliquid
+                        facere velit animi veniam officiis excepturi asperiores
+                        beatae aut minima, quam nobis, incidunt iusto ad. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                        nam? Quae a iusto repudiandae dolorem ipsam excepturi
+                        itaque eligendi soluta? Accusantium libero nemo ullam
+                        harum, fuga dicta. Culpa, saepe hic.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="caja caja-45">
+                    <h5 class="text-dark">PARTICIPANTES</h5>
+                    <div class="h-75 overflow-y-scroll">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>NOMBRE</th>
+                            <th>Rol</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Juan Pérez</td>
+                            <td>Líder</td>
+                          </tr>
+                          <tr>
+                            <td>María García</td>
+                            <td>Trabajador</td>
+                          </tr>
+                          <tr>
+                            <td>Luis Martínez</td>
+                            <td>Trabajador</td>
+                          </tr>
+                          <tr>
+                            <td>Ana López</td>
+                            <td>Trabajador</td>
+                          </tr>
+                          <tr>
+                            <td>Pablo Ramírez</td>
+                            <td>Trabajador</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- pie -->
+        <div class="row fixed-bottom m-0">
+          <div class="row barra-inferior m-0 p-0">
+            <div class="inferior-izquierda col-lg-3">
+              <div class="row p-2 align-items-center">
+                <div class="col-9 text-center">
+                  <div class="row p-0 m-0">
+                    <p class="m-2">Empleado Milti Serv</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <button class="btn btn-danger rounded-5" id="btnLogout">
+                    <i class="fas fa-sign-out-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="texto-barra col-lg-9">
+              <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
