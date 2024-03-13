@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" style="margin: 0">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compromisos</title>
+    <title>Iniciar sesión</title>
 
     <!-- javascript -->
     <script src="./javascript/navegacion.js"></script>
@@ -38,192 +38,83 @@
         <!-- Encabezado -->
         <div class="row fixed-top">
           <div class="row barra-superior m-0 p-0">
-            <div class="texto-barra col-lg-9">
+            <div class="texto-barra col-md-10">
               <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
             </div>
-            <div class="superior-derecha col-lg-3">
-              <div class="row p-2">
-                <div class="col-4 text-center">
-                  <button
-                    type="button"
-                    id="btnActa"
-                    class="btn btn-success btn-circulo rounded-5"
-                  >
-                    <i class="far fa-file"></i>
-                  </button>
-                </div>
-                <div class="col-4 text-center">
-                  <button
-                    type="button"
-                    id="btnProyecto"
-                    disabled="true"
-                    class="btn btn-warning text-light btn-circulo rounded-5"
-                  >
-                    <i class="fas fa-tools"></i>
-                  </button>
-                </div>
-                <div class="col-4 text-center">
-                  <button
-                    type="button"
-                    id="btnCompromiso"
-                    class="btn btn-danger btn-circulo rounded-circle"
-                  >
-                    <i class="fas fa-tasks"></i>
-                  </button>
-                </div>
-              </div>
+            <div class="superior-derecha col-md-2">
+              <img
+                class="imglgsoft"
+                src="./imagenes/smfr.jpeg"
+                alt="logo-software"
+              />
             </div>
           </div>
         </div>
-        <!-- cuerpo -->
-        <div class="row cuerpo overflow-y-auto">
-          <div class="contenedor-central col-12">
-            <div class="contenedor-texto">
-              <div class="caja">
-                <form class="form-inline">
-                  <div class="form-group">
-                    <select class="form-select mx-2">
-                      <option selected>Buscar por...</option>
-                      <option value="codigo">Código</option>
-                      <option value="fecha">Fecha</option>
-                      <option value="proyecto">Proyecto</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
+        <!-- Cuerpo -->
+        <div class="row cuerpo">
+          <div class="contenedor-central col-6 central-login overflow-auto">
+            <div class="row h-100 m-0 align-content-between">
+              <div class="col-md contenedor-texto">
+                <h5 class="card-title text-center">Inicio de sesión</h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="usuario" class="form-label text-light"
+                      >Usuario</label
+                    >
                     <input
                       type="text"
-                      class="form-control mx-2"
-                      id="buscar"
-                      placeholder="Buscar..."
+                      class="form-control"
+                      id="usuario"
+                      name="usuario"
                     />
                   </div>
-                </form>
-              </div>
-            </div>
-            <div class="contenedor-texto h-100 fila-centro">
-              <div class="row pb-2 align-content-between">
-                <div class="col">
-                  <h5>PROYECTO</h5>
-                </div>
-                <div class="col text-end">
-                  <button class="btn btn-warning text-light btn-circulo rounded-circle">
-                    <i class="fas fa-info"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="row fila-centro overflow-y-auto">
-                <div class="col-12 h-100">
-                  <div class="caja caja-100">
-                    <h5 class="text-dark">COMPROMISOS</h5>
-                    <div class="h-75 overflow-y-scroll">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Descripción</th>
-                            <th>Responsable</th>
-                            <th>Fecha de Plazo</th>
-                            <th>Hecho</th>
-                            <th>Validado</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="table-danger">
-                            <td>Entrega de informe final</td>
-                            <td>Luis Martínez</td>
-                            <td>2024-03-15</td>
-                            <td><input type="checkbox" checked /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-danger">
-                            <td>Entrega de informe parcial</td>
-                            <td>Maria Rodríguez</td>
-                            <td>2024-03-20</td>
-                            <td><input type="checkbox" /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-danger">
-                            <td>Revisión de diseño</td>
-                            <td>Juan López</td>
-                            <td>2024-03-25</td>
-                            <td><input type="checkbox" /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-warning">
-                            <td>Pruebas de usabilidad</td>
-                            <td>Andrés González</td>
-                            <td>2024-04-05</td>
-                            <td><input type="checkbox" checked /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-warning">
-                            <td>Presentación del proyecto</td>
-                            <td>Pablo Ramírez</td>
-                            <td>2024-04-10</td>
-                            <td><input type="checkbox" /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-warning">
-                            <td>Reunión de seguimiento</td>
-                            <td>Ana Martínez</td>
-                            <td>2024-04-15</td>
-                            <td><input type="checkbox" checked /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-warning">
-                            <td>Entrega de prototipo</td>
-                            <td>Diego Pérez</td>
-                            <td>2024-04-20</td>
-                            <td><input type="checkbox" /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-warning">
-                            <td>Revisión de contenido</td>
-                            <td>Carla Gutiérrez</td>
-                            <td>2024-04-30</td>
-                            <td><input type="checkbox" /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-success">
-                            <td>Seguimiento de reunión</td>
-                            <td>Andrea Gómez</td>
-                            <td>2024-05-05</td>
-                            <td><input type="checkbox" checked /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                          <tr class="table-success">
-                            <td>Actualización del sitio web</td>
-                            <td>Ricardo Sánchez</td>
-                            <td>2024-05-10</td>
-                            <td><input type="checkbox" /></td>
-                            <td><input type="checkbox" /></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                  <div class="mb-3">
+                    <label for="contraseña" class="form-label text-light"
+                      >Contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="contraseña"
+                      name="contraseña"
+                    />
                   </div>
+                  <div class="text-center">
+                    <button id="btnLogin" class="btn btn-primary me-2">
+                      Iniciar sesión
+                    </button>
+                    <a href="#" class="btn btn-secondary">Registrar</a>
+                  </div>
+                </form>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-link text-primary"
+                    >¿Olvidaste tu contraseña?</a
+                  >
+                </div>
+              </div>
+              <div class="col-md col-img h-100 p-0">
+                <div class="caja caja-img">
+                  <img
+                    src="./imagenes/cosa.png"
+                    alt="Imagen"
+                    class="img-login"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- pie -->
+        <!-- Pie -->
         <div class="row fixed-bottom m-0">
           <div class="row barra-inferior m-0 p-0">
-            <div class="inferior-izquierda col-lg-3">
-              <div class="row p-2 align-items-center">
-                <div class="col-9 text-center">
-                  <div class="row p-0 m-0">
-                    <p class="m-2">Empleado Multi Serv</p>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <button class="btn btn-danger btn-circulo rounded-5" id="btnLogout">
-                    <i class="fas fa-sign-out-alt"></i>
-                  </button>
-                </div>
-              </div>
+            <div class="inferior-izquierda col-md-2">
+              <img
+                class="imglgsoft"
+                src="./imagenes/smfr.jpeg"
+                alt="logo-software"
+              />
             </div>
-            <div class="texto-barra col-lg-9">
+            <div class="texto-barra col-md-10">
               <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
             </div>
           </div>
