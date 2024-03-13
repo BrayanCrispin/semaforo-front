@@ -107,6 +107,12 @@ body {
 }
 
 /*otros*/
+
+.btn-circulo{
+  height: 45px;
+  width: 45px;
+  opacity: 100%;
+}
 .caja p {
   margin: 0;
   color: #11304c;
@@ -128,16 +134,34 @@ body {
   .contenedor-central.col-lg-9 {
     margin-bottom: 100px;
   }
-}
-
-@media (max-width: 767.98px) {
-  .fila-centro > .col-md-8, .fila-centro > .col-md-7{
-      margin-bottom: 10px;
+  .fila-centro > .col-md-8, .fila-centro >.col-md-7{
+    margin-bottom: 10px;
   }
-}
 
-@media (max-width: 767.98px) {
+  .btn-circulo {
+    width: 40px;
+    height: 40px;
+    opacity: 100%;
+  }
+
   .btn i {
     font-size: 0.8rem;
+  }
+
+  .col-img, .caja-img, .img-login {
+    display: none;
+  }
+
+  .contenedor-central.col-lg-3 {
+    max-height: 35%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .btn-circulo {
+    width: 35px;
+    height: 35px;
+    opacity: 100%;
   }
 }

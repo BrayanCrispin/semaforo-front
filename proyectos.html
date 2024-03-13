@@ -1,48 +1,314 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>actas</title>
-    <link rel="stylesheet" href="./bootstrap/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container" data-bs-theme="dark">
-        <div class= "row">
-            <div class="col-5">
-                <button id="proyectos" class="btn btn-primary">Proyectos</button>
-                <button id="tareas" class="btn btn-secondary">Tareas</button>
-                <button id="terminados" class="btn btn-success">Terminados</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos</title>
+
+    <!-- javascript -->
+    <script src="./javascript/navegacion.js"></script>
+
+    <!-- iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+
+    <!-- fuente Bauer -->
+    <link href="https://fonts.cdnfonts.com/css/bauer" rel="stylesheet" />
+
+    <!-- fuente Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body>
+    <div class="fondo h-100 w-100 position-fixed">
+      <div class="col m-0 p-0 h-100">
+        <!-- Encabezado -->
+        <div class="row fixed-top">
+          <div class="row barra-superior m-0 p-0">
+            <div class="texto-barra col-lg-9">
+              <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
             </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Acta 6</a>
-                    <a href="#" class="list-group-item list-group-item-action">Acta 5</a>
-                    <a href="#" class="list-group-item list-group-item-action">Acta 4</a>
-                    <a href="#" class="list-group-item list-group-item-action">Acta 3</a>
-                    <a href="#" class="list-group-item list-group-item-action">Acta 2</a>
-                    <a href="#" class="list-group-item list-group-item-action">Acta 1</a>
+            <div class="superior-derecha col-lg-3">
+              <div class="row p-2">
+                <div class="col-4 text-center">
+                  <button
+                    type="button"
+                    id="btnActa"
+                    class="btn btn-success btn-circulo rounded-5"
+                  >
+                    <i class="far fa-file"></i>
+                  </button>
                 </div>
+                <div class="col-4 text-center">
+                  <button
+                    type="button"
+                    id="btnProyecto"
+                    disabled="true"
+                    class="btn btn-warning text-light btn-circulo rounded-5"
+                  >
+                    <i class="fas fa-tools"></i>
+                  </button>
+                </div>
+                <div class="col-4 text-center">
+                  <button
+                    type="button"
+                    id="btnCompromiso"
+                    class="btn btn-danger btn-circulo rounded-circle"
+                  >
+                    <i class="fas fa-tasks"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="col-md-9">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Detalles del Proyecto</h5>
-                        <p>Código del Proyecto: XXX</p>
-                        <p>Nombre del Proyecto: Proyecto 1</p>
-                        <p>Fecha del Proyecto: 01/01/2024</p>
+          </div>
+        </div>
+        <!-- cuerpo -->
+        <div class="row cuerpo overflow-y-auto">
+          <div class="contenedor-central col-lg-3 vh-100">
+            <div class="contenedor-texto">
+              <div class="overflow-y-scroll h-100">
+                <div class="caja">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <select class="form-select mx-2">
+                        <option selected>Buscar por...</option>
+                        <option value="codigo">Código</option>
+                        <option value="proyecto">Nombre</option>
+                      </select>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Tarea 1</li>
-                        <li class="list-group-item">Tarea 2</li>
-                        <li class="list-group-item">Tarea 3</li>
-                        <li class="list-group-item">Tarea 4</li>
-                    </ul>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control mx-2"
+                        id="buscar"
+                        placeholder="Buscar..."
+                      />
+                    </div>
+                  </form>
                 </div>
+                <div id="lista-proyectos" class="overflow-auto">
+                  <div class="row row-cols-lg-1 row-cols-md-4 m-0 p-0">
+                    <div class="caja col">
+                      <p>Código: XYZ789</p>
+                      <p class="text-black">Proyecto: Proyecto E</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: VWX123</p>
+                      <p class="text-black">Proyecto: Proyecto H</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: PQR456</p>
+                      <p class="text-black">Proyecto: Proyecto F</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: GHI789</p>
+                      <p class="text-black">Proyecto: Proyecto D</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: YZA456</p>
+                      <p class="text-black">Proyecto: Proyecto I</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: MNO123</p>
+                      <p class="text-black">Proyecto: Proyecto E</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: STU789</p>
+                      <p class="text-black">Proyecto: Proyecto G</p>
+                    </div>
+                    <div class="caja col">
+                      <p>Código: DEF456</p>
+                      <p class="text-black">Proyecto: Proyecto C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="contenedor-central col-lg-9">
+            <div class="contenedor-texto h-100 fila-centro">
+              <div class="row pb-2 align-content-between">
+                <div class="col">
+                  <h5>PROYECTO</h5>
+                </div>
+                <div class="col text-end">
+                  <button class="btn btn-warning text-light btn-circulo rounded-circle">
+                    <i class="fas fa-info"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="row fila-centro overflow-y-auto">
+                <div class="col-md-8 h-100">
+                  <div class="caja caja-100">
+                    <h5 class="text-dark">COMPROMISOS</h5>
+                    <div class="h-75 overflow-y-scroll">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Descripción</th>
+                            <th>Responsable</th>
+                            <th>Fecha de Plazo</th>
+                            <th>Hecho</th>
+                            <th>Validado</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="table-danger">
+                            <td>Entrega de informe final</td>
+                            <td>Luis Martínez</td>
+                            <td>2024-03-15</td>
+                            <td><input type="checkbox" checked /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-danger">
+                            <td>Entrega de informe parcial</td>
+                            <td>Maria Rodríguez</td>
+                            <td>2024-03-20</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-danger">
+                            <td>Revisión de diseño</td>
+                            <td>Juan López</td>
+                            <td>2024-03-25</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Pruebas de usabilidad</td>
+                            <td>Andrés González</td>
+                            <td>2024-04-05</td>
+                            <td><input type="checkbox" checked /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Presentación del proyecto</td>
+                            <td>Pablo Ramírez</td>
+                            <td>2024-04-10</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Reunión de seguimiento</td>
+                            <td>Ana Martínez</td>
+                            <td>2024-04-15</td>
+                            <td><input type="checkbox" checked /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Entrega de prototipo</td>
+                            <td>Diego Pérez</td>
+                            <td>2024-04-20</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-warning">
+                            <td>Revisión de contenido</td>
+                            <td>Carla Gutiérrez</td>
+                            <td>2024-04-30</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-success">
+                            <td>Seguimiento de reunión</td>
+                            <td>Andrea Gómez</td>
+                            <td>2024-05-05</td>
+                            <td><input type="checkbox" checked /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                          <tr class="table-success">
+                            <td>Actualización del sitio web</td>
+                            <td>Ricardo Sánchez</td>
+                            <td>2024-05-10</td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" /></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 h-100">
+                  <div class="caja caja-45">
+                    <h5 class="text-dark">ACTAS</h5>
+                    <div class="h-75 overflow-y-scroll">
+                      <ul>
+                        <li>
+                          <a href="#" class="text-black">2024mar05-002</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-black">2024feb28-004</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-black">2024feb27-005</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-black">2024feb26-006</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-black">2024feb25-007</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="caja caja-45">
+                    <h5 class="text-dark">INVOLUCRADOS</h5>
+                    <div class="h-75 overflow-y-scroll">
+                      <ul class="text-black">
+                        <li>Luis Martínez - Lider</li>
+                        <li>Pablo Ramírez</li>
+                        <li>Andrea Gómez - Lider</li>
+                        <li>Ricardo Sánchez</li>
+                        <li>Maria Rodríguez</li>
+                        <li>Juan López</li>
+                        <li>Andrés González</li>
+                        <li>Ana Martínez</li>
+                        <li>Diego Pérez</li>
+                        <li>Carla Gutiérrez</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- pie -->
+        <div class="row fixed-bottom m-0">
+          <div class="row barra-inferior m-0 p-0">
+            <div class="inferior-izquierda col-lg-3">
+              <div class="row p-2 align-items-center">
+                <div class="col-9 text-center">
+                  <div class="row p-0 m-0">
+                    <p class="m-2">Empleado Multi Serv</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <button class="btn btn-danger btn-circulo rounded-5" id="btnLogout">
+                    <i class="fas fa-sign-out-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="texto-barra col-lg-9">
+              <p class="m-0">ESTO ES UN TEXTO DE PRUEBA</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
