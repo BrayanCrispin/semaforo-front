@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iniciar sesión</title>
+    <title>Registrar</title>
 
     <!-- javascript -->
     <script src="./javascript/navegacion.js"></script>
@@ -51,21 +51,71 @@
           </div>
         </div>
         <!-- Cuerpo -->
-        <div class="row cuerpo">
-          <div class="contenedor-central col-6 central-login overflow-auto">
-            <div class="row h-100 m-0 align-content-between">
-              <div class="col-md contenedor-texto">
-                <h5 class="card-title text-center">Inicio de sesión</h5>
-                <form>
+        <div class="row cuerpo overflow-y-auto">
+          <div class="contenedor-central h-75 col-12">
+            <div class="col-md contenedor-texto">
+              <div class="row">
+                <h5 class="card-title text-center">Crear usuario</h5>
+              </div>
+              <div class="row overfy overflow-y-auto">
+                <form class="row row-cols-md-3">
                   <div class="mb-3">
-                    <label for="usuario" class="form-label text-light"
-                      >Usuario</label
+                    <label for="documento" class="form-label text-light"
+                      >Documento</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="usuario"
-                      name="usuario"
+                      id="documento"
+                      name="documento"
+                    />
+                  </div>
+                  <div class="mb-3 espacio-singin">
+                  </div>
+                  <div class="mb-3 espacio-singin">
+                  </div>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label text-light"
+                      >Nombre</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="apellidos" class="form-label text-light"
+                      >Apellidos</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="apellidos"
+                      name="apellidos"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cargo" class="form-label text-light"
+                      >Cargo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cargo"
+                      name="cargo"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="correo" class="form-label text-light"
+                      >Correo</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="correo"
+                      name="correo"
                     />
                   </div>
                   <div class="mb-3">
@@ -79,26 +129,14 @@
                       name="contraseña"
                     />
                   </div>
-                  <div class="text-center">
-                    <button id="btnLogin" class="btn btn-primary me-2">
-                      Iniciar sesión
-                    </button>
-                    <a href="#" id="btnSingin" class="btn btn-secondary">Registrar</a>
-                  </div>
                 </form>
-                <div class="text-center mt-3">
-                  <a href="#" class="btn btn-link text-primary"
-                    >¿Olvidaste tu contraseña?</a
-                  >
-                </div>
-              </div>
-              <div class="col-md col-img h-100 p-0">
-                <div class="caja caja-img">
-                  <img
-                    src="./imagenes/cosa.png"
-                    alt="Imagen"
-                    class="img-login"
-                  />
+                <div class="text-center my-3">
+                  <div class="text-center">
+                    <button id="btnCrearUsuario" class="btn btn-primary me-2">
+                      Crear usuario
+                    </button>
+                    <a href="#" id="btnVolverLogin" class="btn btn-secondary">Ya tengo un usuario</a>
+                  </div>
                 </div>
               </div>
             </div>
