@@ -73,8 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("btnVolverLogin").addEventListener("click",login);
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   function name(params) {
-    
-//   }  
-// });
+document.addEventListener("DOMContentLoaded",function() {
+  function vistaActas(event) {
+    event.preventDefault();
+    window.location.href ="acta-ejemplo.html";
+  }
+
+  document.getElementById("acta-ejemplo").addEventListener("click",vistaActas);
+});

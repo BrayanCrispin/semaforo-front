@@ -101,32 +101,30 @@
                   </button>
                 </div>
               </div>
-              <div class="caja">
-                <form class="row form-inline">
-                  <div class="form-group col-6">
-                    <select class="form-select mx-2">
-                      <option selected>Buscar por...</option>
-                      <option value="responsable">Responsable</option>
-                      <option value="plazo">Plazo</option>
-                      <option value="proyecto">Proyecto</option>
-                      <option value="hecho">Hecho</option>
-                      <option value="validado">Validado</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-6">
-                    <input
-                      type="text"
-                      class="form-control mx-2"
-                      id="buscar"
-                      placeholder="Buscar..."
-                    />
-                  </div>
-                </form>
-              </div>
+              <form class="row form-inline m-0 mw-100 mb-3">
+                <div class="form-group col-md-6 px-0 mb-2">
+                  <select class="form-select">
+                    <option selected>Buscar por...</option>
+                    <option value="responsable">Responsable</option>
+                    <option value="plazo">Plazo</option>
+                    <option value="proyecto">Proyecto</option>
+                    <option value="hecho">Hecho</option>
+                    <option value="validado">Validado</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6 px-0">
+                  <input
+                    type="text"
+                    class="form-control mx-2"
+                    id="buscar"
+                    placeholder="Buscar..."
+                  />
+                </div>
+              </form>
               <div class="row fila-centro overflow-y-auto">
                 <div class="col-12 h-100">
-                  <div class="caja h-75">
-                    <div class="h-100 overflow-y-scroll">
+                  <div class="caja-80">
+                    <div class="h-100 overflow-y-scroll overfy">
                       <table class="table">
                         <thead>
                           <tr>
@@ -322,14 +320,6 @@
                           </tr>
                         </tbody>
                       </table>
-                      <button
-                        class="btn btn-danger rounded-5"
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modal-edicion"
-                      >
-                        <i class="fas fa-user-edit"></i>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -382,87 +372,85 @@
             class="btn"
             data-bs-dismiss="modal"
             aria-label="Close"
-          >x</button>
+          >
+            x
+          </button>
         </div>
         <div class="modal-body contenedor-texto rounded-0">
           <div class="row overfy overflow-y-auto">
-          <form class="row row-cols-md-1">
-            <div class="mb-3">
-              <label for="documento" class="form-label text-light"
-                >Documento</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="documento"
-                name="documento"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="nombre" class="form-label text-light"
-                >Nombre</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="nombre"
-                name="nombre"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="apellidos" class="form-label text-light"
-                >Apellidos</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="apellidos"
-                name="apellidos"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="cargo" class="form-label text-light"
-                >Cargo</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="cargo"
-                name="cargo"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="correo" class="form-label text-light"
-                >Correo</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="correo"
-                name="correo"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="contraseña" class="form-label text-light"
-                >Contraseña</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="contraseña"
-                name="contraseña"
-              />
-            </div>
-          </form>
-          <div class="text-center my-3">
-            <div class="text-center">
-              <button id="btnCrearUsuario" class="btn btn-primary me-2">
-                Crear usuario
-              </button>
-              <a href="#" id="btnVolverLogin" class="btn btn-secondary">Ya tengo un usuario</a>
+            <form class="row row-cols-md-1">
+              <div class="mb-3">
+                <label for="documento" class="form-label text-light"
+                  >Documento</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="documento"
+                  name="documento"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="nombre" class="form-label text-light">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellidos" class="form-label text-light"
+                  >Apellidos</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellidos"
+                  name="apellidos"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="cargo" class="form-label text-light">Cargo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cargo"
+                  name="cargo"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label text-light">Correo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correo"
+                  name="correo"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contraseña" class="form-label text-light"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="contraseña"
+                  name="contraseña"
+                />
+              </div>
+            </form>
+            <div class="text-center my-3">
+              <div class="text-center">
+                <button id="btnCrearUsuario" class="btn btn-primary me-2">
+                  Crear usuario
+                </button>
+                <a href="#" id="btnVolverLogin" class="btn btn-secondary"
+                  >Ya tengo un usuario</a
+                >
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <div class="modal-footer contenedor-texto rounded-0">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">

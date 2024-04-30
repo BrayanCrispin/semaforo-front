@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" style="margin: 0">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,53 +52,62 @@
         </div>
         <!-- Cuerpo -->
         <div class="row cuerpo">
-          <div class="contenedor-central col-6 central-login overflow-auto">
+          <div class="contenedor-central col-6 central-login">
             <div class="row h-100 m-0 align-content-between">
-              <div class="col-md contenedor-texto">
-                <h5 class="card-title text-center">Inicio de sesión</h5>
-                <form>
-                  <div class="mb-3">
-                    <label for="usuario" class="form-label text-light"
-                      >Usuario</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="usuario"
-                      name="usuario"
-                    />
+              <div class="col h-100">
+                <div class="row p-0 contenedor-texto">
+                  <div class="col-md-6 mt-3 overfy overflow-y-auto text-center">
+                    <h5 class="card-title text-center">Inicio de sesión</h5>
+                    <hr />
+                    <form>
+                      <div class="mb-3">
+                        <label for="usuario" class="form-label text-light"
+                          >Usuario</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="usuario"
+                          name="usuario"
+                        />
+                      </div>
+                      <div class="text-center">
+                        <div class="mb-3">
+                          <label for="contraseña" class="form-label text-light"
+                            >Contraseña</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="contraseña"
+                            name="contraseña"
+                          />
+                        </div>
+                        <div class="text-center">
+                          <button id="btnLogin" class="btn btn-primary me-2">
+                            Iniciar sesión
+                          </button>
+                          <a href="#" id="btnSingin" class="btn btn-secondary"
+                            >Registrar</a
+                          >
+                        </div>
+                      </div>
+                    </form>
+                    <div class="text-center mt-3">
+                      <a href="#" class="btn btn-link text-primary"
+                        >¿Olvidaste tu contraseña?</a
+                      >
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="contraseña" class="form-label text-light"
-                      >Contraseña</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="contraseña"
-                      name="contraseña"
-                    />
+                  <div class="col-md-6 col-img h-100 p-0">
+                    <div class="caja caja-img">
+                      <img
+                        src="./imagenes/cosa.png"
+                        alt="Imagen"
+                        class="img-login"
+                      />
+                    </div>
                   </div>
-                  <div class="text-center">
-                    <button id="btnLogin" class="btn btn-primary me-2">
-                      Iniciar sesión
-                    </button>
-                    <a href="#" id="btnSingin" class="btn btn-secondary">Registrar</a>
-                  </div>
-                </form>
-                <div class="text-center mt-3">
-                  <a href="#" class="btn btn-link text-primary"
-                    >¿Olvidaste tu contraseña?</a
-                  >
-                </div>
-              </div>
-              <div class="col-md col-img h-100 p-0">
-                <div class="caja caja-img">
-                  <img
-                    src="./imagenes/cosa.png"
-                    alt="Imagen"
-                    class="img-login"
-                  />
                 </div>
               </div>
             </div>

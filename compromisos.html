@@ -89,7 +89,7 @@
             <div class="contenedor-texto h-100 fila-centro">
               <div class="row pb-2 align-content-between">
                 <div class="col">
-                  <h5>PROYECTO</h5>
+                  <h5>COMPROMISOS</h5>
                 </div>
                 <div class="col text-end">
                   <button
@@ -99,33 +99,30 @@
                   </button>
                 </div>
               </div>
-              <div class="caja">
-                <form class="row form-inline">
-                  <div class="form-group col-6">
-                    <select class="form-select mx-2">
-                      <option selected>Buscar por...</option>
-                      <option value="responsable">Responsable</option>
-                      <option value="plazo">Plazo</option>
-                      <option value="proyecto">Proyecto</option>
-                      <option value="hecho">Hecho</option>
-                      <option value="validado">Validado</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-6">
-                    <input
-                      type="text"
-                      class="form-control mx-2"
-                      id="buscar"
-                      placeholder="Buscar..."
-                    />
-                  </div>
-                </form>
-              </div>
+              <form class="row form-inline m-0 mw-100 mb-3">
+                <div class="form-group col-md-6 mb-2">
+                  <select class="form-select">
+                    <option selected>Buscar por...</option>
+                    <option value="responsable">Responsable</option>
+                    <option value="plazo">Plazo</option>
+                    <option value="proyecto">Proyecto</option>
+                    <option value="hecho">Hecho</option>
+                    <option value="validado">Validado</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <input
+                    type="text"
+                    class="form-control mx-2"
+                    id="buscar"
+                    placeholder="Buscar..."
+                  />
+                </div>
+              </form>
               <div class="row fila-centro overflow-y-auto">
                 <div class="col-12 h-100">
-                  <div class="caja h-75">
-                    <h5 class="text-dark">COMPROMISOS</h5>
-                    <div class="h-75 overflow-y-scroll">
+                  <div class="caja-80">
+                    <div class="h-100 overflow-y-scroll overfy">
                       <table class="table">
                         <thead>
                           <tr>
